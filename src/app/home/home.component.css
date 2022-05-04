@@ -1,0 +1,51 @@
+.b-color{
+    margin: 0 5% 0 5% !important;
+    background: rgba(255, 255, 255, 0.667);
+    border-radius: 20px;
+    box-shadow: 5px black;
+}
+
+.image-pos {
+    animation: slideIn 1s;
+    box-shadow: 2px 2px 10px black;
+}
+
+.intro-para {
+    font-style: italic;
+    font-size: x-large;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    animation: popout 1s;
+    text-indent: 2cm;
+}
+
+.div-1 {
+    height: 100%;
+    padding: 20px 0 20px 0;
+    align-items: center;
+}
+
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@keyframes slideIn{
+    0%{
+        transform: translateX(-200px);
+        opacity: 0
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes popout{
+    0%{
+        transform: scale(0) rotate(-180deg);
+    }
+    100%{
+        transform: scale(1) rotate(0);
+    }
+}

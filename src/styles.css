@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(69, 69, 69), magenta);
+    /* background-image: url('./assets/images/bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.nav-texts {
+    padding: 0.5rem 2rem;
+    animation: opaque 2s;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: larger;
+    color: azure;
+}
+
+.nav-item {
+    width: max-content;
+    transition: ease-in 0.2s;
+}
+
+.nav-item:hover {
+    transform: scale(1.2);
+}
+
+.custom-nav {
+    background-color: rgb(0, 0, 0, 0.4);
+    color: rgb(255, 255, 255);
+    min-height: 100px;
+    margin-bottom: 20px;
+}
+
+#bar-icon {
+    transition: ease 1s;
+}
+
+#menu-items {
+    transition: ease 1s;
+}
+
+.navbar-brand {
+    padding-left: 10px;
+    animation: opaque 2s;
+    font-size: xx-large !important;
+}
+
+@keyframes opaque {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
