@@ -1,5 +1,5 @@
 export var config = {
-    "build": true,
+    "build": false,
     "devAssetPath": "../../assets",
-    "buildAssetPath": "/profile/docs/assets"
+    "buildAssetPath": "/assets"
 }
