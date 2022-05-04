@@ -1,5 +1,5 @@
 export var config = {
-    "build": false,
+    "build": true,
     "devAssetPath": "../../assets",
-    "buildAssetPath": "/assets"
+    "buildAssetPath": "https://github.com/srikara369/profile/tree/main/docs/assets"
 }
