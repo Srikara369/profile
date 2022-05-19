@@ -6,6 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
+// PrimeNG modules
+
+import { TimelineModule } from 'primeng/timeline'
+import { CardModule } from 'primeng/card'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +19,9 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TimelineModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

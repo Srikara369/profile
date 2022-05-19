@@ -6,13 +6,44 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
         <li class="nav-item" *ngFor="let h of headings">
-          <span class="nav-texts">{{h}}</span>
+          <a class="nav-texts" href="#{{h}}">{{h}}</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div>
-  <router-outlet></router-outlet>
+<div class="section" style="margin-top: auto;">
+  <div id="About" class="row text-center b-color">
+    <div class="col-md-10 col-lg-4 offset-md-1 offset-lg-1">
+      <img class="image-pos" src="{{assetPath}}/images/My photo.jpg" style="max-width: 90%;">
+    </div>
+    <div class="col-md-10 col-lg-5 offset-lg-1 offset-md-1">
+      <p id="summary" class="intro-para">A MEAN full stack developer aspiring to keep learning new technologies,
+        domains and attain deep knowledge. Apply the acquired knowledge to develop ground breaking solutions
+        and contribute immensely to the software world. I have worked on Blockchain platforms like Multichain,
+        Ethereum and Corda. I have learnt and worked on Cloud platforms like AWS, Azure and GCP and developed
+        a testing solution.
+      </p>
+    </div>
+  </div>
+  <br>
+  <div id="Education" class="card text-center b-color">
+    <p-timeline [value]="events1" align="alternate">
+      <ng-template pTemplate="marker" let-event>
+        <span class="custom-marker" [style.color]="event.color">
+          <span [ngClass]="event.icon"></span>
+        </span>
+      </ng-template>
+      <ng-template pTemplate="content" let-event>
+        <h4 class="fadeIn">{{event.status}}</h4>
+        <p class="fadeIn">{{event.data}}</p>
+        <hr>
+      </ng-template>
+    </p-timeline>
+  </div>
+  <br>
+  <!-- <div id="Skills" class="text-center b-color">
+
+  </div> -->
 </div>

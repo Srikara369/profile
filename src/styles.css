@@ -3,6 +3,7 @@
 html,
 body {
     width: 100%;
+    margin-bottom: 50px;
     background-image: linear-gradient(to right, rgb(69, 69, 69), magenta);
     /* background-image: url('./assets/images/bg.jpeg');
     background-repeat: no-repeat;
@@ -20,6 +21,11 @@ body {
     font-family: monospace;
     font-size: larger;
     color: azure;
+    text-decoration: none;
+}
+
+.nav-texts:hover{
+    color: azure;
 }
 
 .nav-item {
@@ -36,14 +42,6 @@ body {
     color: rgb(255, 255, 255);
     min-height: 100px;
     margin-bottom: 20px;
-}
-
-#bar-icon {
-    transition: ease 1s;
-}
-
-#menu-items {
-    transition: ease 1s;
 }
 
 .navbar-brand {
