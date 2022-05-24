@@ -1,4 +1,6 @@
-<div class="row div-1 text-center b-color">
+<div id="About" class="row text-center b-color">
+    <h1>About</h1>
+    <hr>
     <div class="col-md-10 col-lg-4 offset-md-1 offset-lg-1">
         <img class="image-pos" src="{{assetPath}}/images/My photo.jpg" style="max-width: 90%;">
     </div>
@@ -9,5 +11,47 @@
             Ethereum and Corda. I have learnt and worked on Cloud platforms like AWS, Azure and GCP and developed
             a testing solution.
         </p>
+    </div>
+</div>
+<br>
+<div id="Education" class="text-center b-color">
+    <h1>Education</h1>
+    <hr>
+    <p-timeline [value]="educations" align="alternate">
+        <ng-template pTemplate="marker" let-education>
+            <span class="custom-marker" [style.color]="education.color">
+                <span [ngClass]="education.icon"></span>
+            </span>
+        </ng-template>
+        <ng-template pTemplate="content" let-education>
+            <h4 class="fadeIn">{{education.degree}}</h4>
+            <h6 class="fadeIn">{{education.years}}</h6>
+            <p class="fadeIn">{{education.data}}</p>
+            <hr>
+        </ng-template>
+    </p-timeline>
+</div>
+<br>
+<div id="Skills" class="text-center b-color">
+    <h1>Skills</h1>
+    <hr>
+    <div class="row">
+        <div class="col-10 offset-1">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-12 fadeIn" *ngFor="let category of skills">
+                    <div class="card">
+                        <div class="card-header">{{category.name}}</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col fill" *ngFor="let skill of category.value">
+                                    <span><img src={{skill.icon}} height="30px" width="auto"></span><br>
+                                    {{skill.a}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
